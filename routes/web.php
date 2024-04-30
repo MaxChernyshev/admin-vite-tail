@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\MainController;
+use App\Http\Controllers\Admin\MainController as AdminMain;
+use App\Http\Controllers\Front\MainController as FrontMain;
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,13 +19,24 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
 // ADMIN PANEL
 Route::name('admin.')
     ->prefix('admin')
     ->group(function () {
-        Route::get('/', [MainController::class, 'index'])->name('index');
+        Route::get('/', [AdminMain::class, 'index'])->name('index');
     });
 
 // END ADMIN PANEL
+
+
+// FRONT
+Route::name('front.')
+    ->group(function () {
+        Route::get('/', [FrontMain::class, 'index'])->name('index');
+    });
+
+// END FRONT
+
 
 require __DIR__ . '/auth.php';
