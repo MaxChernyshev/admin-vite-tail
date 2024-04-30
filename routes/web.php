@@ -19,9 +19,11 @@ Route::middleware('auth')->group(function () {
 });
 
 // ADMIN PANEL
-Route::name('admin.')->group(function () {
-    Route::get('/admin', [MainController::class, 'index'])->name('index');
-});
+Route::name('admin.')
+    ->prefix('admin')
+    ->group(function () {
+        Route::get('/', [MainController::class, 'index'])->name('index');
+    });
 
 // END ADMIN PANEL
 
