@@ -1,11 +1,3 @@
-import "../../css/admin/simple-datatables.css";
-import "../../css/admin/satoshi.css";
-import "jsvectormap/dist/css/jsvectormap.css";
-import "flatpickr/dist/flatpickr.min.css";
-import "nouislider/dist/nouislider.css";
-import "dropzone/dist/dropzone.css";
-import "../../css/admin/style.css";
-
 import Alpine from "alpinejs";
 import persist from "@alpinejs/persist";
 import flatpickr from "flatpickr";
