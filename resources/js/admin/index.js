@@ -104,7 +104,7 @@ if (sliderWrapper.length) {
 const dropzoneArea = document.querySelectorAll("#demo-upload");
 
 if (dropzoneArea.length) {
-    let myDropzone = new Dropzone("#demo-upload", {url: "/file/post"});
+    let myDropzone = new Dropzone("#demo-upload", { url: "/file/post" });
 }
 
 // Document Loaded

@@ -6,9 +6,10 @@ module.exports = {
     content: [
         './resources/views/admin/*.{html,php}',
         './resources/views/admin/partials/*.{html,php}',
-        './resources/css/admin/*.{css}',
+        './resources/css/admin/*.css',
+        './resources/js/*.{js}',
         './resources/js/admin/*.{js}',
-        './resources/js/admin/components*.{js}',
+        './resources/js/admin/components/*.{js}',
     ],
     darkMode: 'class',
     theme: {
